@@ -1,0 +1,61 @@
+#app {
+    margin-top: 80px;
+    text-align: center;
+}
+
+#bar {
+    font-size: 0;
+}
+
+#app img {
+    display: inline;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#app h3 {
+    display: inline;
+    font-size: 60px;
+    vertical-align: middle;
+}
+
+#city {
+    height: 30px;
+    width: 20%;
+    margin-top: 30px;
+    border: 1px black solid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+#enter {
+    background-color: rgb(66, 133, 244);
+    height: 35px;
+    width: 5%;
+    color: white;
+    border: 1px black solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+#hot {
+    margin-top: 10px;
+}
+#hot span {
+    font-size: 14px;
+    padding: 10px;
+    color: #5E5E5E;
+    cursor: pointer;
+}
+#detail {
+    margin-top: 20px;
+}
+ul {
+    display: inline;
+    line-height: 30px;
+}
+ul li {
+    display: inline-block;
+    padding: 20px;
+}

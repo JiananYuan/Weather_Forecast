@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国内天气</title>
+    <link rel="icon" href="Icon.jpg" type="image/x-icon"/>
+    <link href="wrcss.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+    <div id="app">
+        <div id="head">
+            <img src="icon.jpeg" alt="weather" width="80px" height="80px">
+            <h3>Weather Forecast</h3>
+        </div>
+        <div id="bar">
+            <input id="city" type="text" placeholder="请输入城市" v-model="city" @keyup.enter="getWeather">
+            <input id="enter" type="button" value="查询" @click="getWeather">
+        </div>
+        <div id="hot">
+            <span v-on:click="getWeather1">北京</span>
+            <span v-on:click="getWeather2">上海</span>
+            <span v-on:click="getWeather3">深圳</span>
+            <span v-on:click="getWeather4">广州</span>
+        </div>
+        <div id="detail">
+            <ul>
+                <li v-for="item in arr">
+                    <div style="font-weight: bold;">{{ item.date }}</div>
+                    <img :src="item.img" alt="加载图片失败" width="110px" height="110px">
+                    <div>{{ item.type }}</div>
+                    <div>{{ item.high }}</div>
+                    <div>{{ item.low }}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="bottom: 20px; position: absolute; color: rgb(50, 24, 197); height: 50px; line-height: 50px; text-align: center; width: 99%;">
+        Powered By Jianan Yuan 2020 ©保留所有版权
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="wrjs.js" type="text/javascript"></script>
+</body>
+</html>
